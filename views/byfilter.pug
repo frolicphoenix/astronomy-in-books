@@ -1,8 +1,7 @@
 extends layout
 
 block layout-content
-    .month-form
-        h1 Search for any books
+    .content
         form(action="/byfilter", method="get")
             div
                 label(for="title") Title: 
@@ -17,7 +16,8 @@ block layout-content
                 label(for="genre") Genre: 
                 input(type="text", name="genre", id="genre")
             div
-                button.btn(type="submit") Search
+                button(type="submit") Search
+
         if books
             if books.length > 0
                 h1 Search Results
